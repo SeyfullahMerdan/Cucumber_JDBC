@@ -55,5 +55,14 @@ public class DBUtillStepDefinitions {
     }
 
 
+    @Then("IDHotel degeri {int} olan kaydin Email bilgisini {string} yapar.")
+    public void ıdhotelDegeriOlanKaydinEmailBilgisiniYapar(int IDHotel, String yeniEmail) {
+
+        // UPDATE Email FROM tHOTEL WHERE IDHotel='1016';
+        String updateQuery="UPDATE tHOTEL SET Email='"+yeniEmail+"'  WHERE IDHotel='"+IDHotel+"';";
+        DBUtils.executeQuery(updateQuery);
+    }
+
+
 
 }
